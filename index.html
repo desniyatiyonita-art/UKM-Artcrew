@@ -1,129 +1,211 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UKM Artcrew - Universitas Katolik Widya Karya</title>
+
+  <title> UKM Artcrew - Universitas Katolik Widya Karya </title>
+
+  <!-- Menghubungkan HTML dengan stylesheet eksternal -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+  <!-- Header -->
   <header>
     <h1>UKM Artcrew</h1>
     <p>Universitas Katolik Widya Karya</p>
   </header>
 
+
+  <!-- Navigasi utama -->
   <nav aria-label="Navigasi utama">
-    <a href="#tentang">Tentang Kami</a> |
-    <a href="#divisi">Divisi</a> |
-    <a href="#kontak">Kontak &amp; Saran</a>
+    <a class="nav-link" href="#tentang">Tentang Kami</a>
+    <a class="nav-link" href="#divisi">Divisi</a>
+    <a class="nav-link" href="#kontak">Kontak &amp; Saran</a>
   </nav>
 
+
+  <!-- Konten utama -->
   <main>
 
-    <article id="tentang">
+    <!-- Tentang UKM -->
+    <article class="card" id="tentang">
+
       <h2>Tentang UKM Artcrew</h2>
 
-      <img id="gambarArtcrew"
-           src="UKM ARTCrew.jpeg"
-           alt="Anggota UKM Artcrew berlatih bersama"
-           width="400">
+      <img
+        id="gambarArtcrew"
+        src="UKM ARTCrew.jpeg"
+        alt="Anggota UKM Artcrew berlatih bersama"
+        width="400"
+      >
 
-      <br><br>
+      <div class="button-area">
+        <button type="button" onclick="tambahGambar()">
+          Tambah Gambar
+        </button>
+      </div>
 
-      <button onclick="tambahGambar()">Tambah Gambar</button>
+      <!-- Tempat gambar tambahan dari JavaScript -->
+      <div id="galeri" aria-label="Galeri gambar"></div>
 
-      <div id="galeri"></div>
-
-      <p>
-        UKM Artcrew adalah unit kegiatan mahasiswa di Universitas Katolik
+      
+        <p>UKM Artcrew adalah unit kegiatan mahasiswa di Universitas Katolik
         Widya Karya yang menjadi wadah bagi mahasiswa untuk mengembangkan
-        minat dan talenta di bidang seni.
-      </p>
+        minat dan talenta di bidang seni.</p>
+      
+      <p> Melalui latihan rutin dan berbagai pementasan, UKM Artcrew berupaya
+            melestarikan budaya sekaligus mendorong inovasi seni di lingkungan kampus.</p>
+    
+      </article>
 
-      <p>
-        Melalui latihan rutin dan berbagai pementasan, UKM Artcrew berupaya
-        melestarikan budaya sekaligus mendorong inovasi seni di lingkungan kampus.
-      </p>
-    </article>
+        <section class="card" id="divisi">
 
-    <section id="divisi">
       <h2>Divisi Kami</h2>
 
-      <h3>Tari Tradisional</h3>
-      <p>Melestarikan kekayaan budaya Nusantara melalui latihan dan pertunjukan tari daerah.</p>
+      <div class="division-list">
 
-      <h3>Tari Modern</h3>
-      <p>Mengembangkan kreativitas gerak melalui tari kontemporer dan koreografi modern.</p>
+        <div class="division-item">
+          <h3>Tari Tradisional</h3>
+          
+           <p> Melestarikan kekayaan budaya Nusantara melalui latihan dan
+            pertunjukan tari daerah. </p>
+          
+        </div>
 
-      <h3>Seni Rupa</h3>
-      <p>Menyalurkan ekspresi visual melalui lukisan, ilustrasi, dan karya seni rupa lainnya.</p>
+        <div class="division-item">
+          <h3>Tari Modern</h3>
+          <p> Mengembangkan kreativitas gerak melalui tari kontemporer
+            dan koreografi modern.</p>
+            
+          </div>
+            <div class="division-item">
+          <h3>Seni Rupa</h3>
+          <p> Menyalurkan ekspresi visual melalui lukisan, ilustrasi,
+            dan karya seni rupa lainnya.</p>
+            
+          </div>
+           <div class="division-item">
+          <h3>Musik</h3>
+         
+            <p> Mengasah kemampuan bermusik, baik vokal maupun instrumen,
+            melalui latihan dan pentas rutin.</p>
+          
+        </div>
+          <div class="division-item">
+          <h3>Teater</h3>
+          <p>  Melatih seni peran dan produksi pertunjukan teater dari
+            naskah hingga pentas.</p>
+           
+          </div>
+           </div>
 
-      <h3>Musik</h3>
-      <p>Mengasah kemampuan bermusik, baik vokal maupun instrumen, melalui latihan dan pentas rutin.</p>
-
-      <h3>Teater</h3>
-      <p>Melatih seni peran dan produksi pertunjukan teater dari naskah hingga pentas.</p>
     </section>
 
-    <section id="kontak">
+      <section class="card" id="kontak">
+
       <h2>Kontak &amp; Saran</h2>
 
-      <p>
-        Punya pertanyaan, masukan, atau ingin bergabung dengan salah satu divisi kami?
-        Silakan isi form di bawah ini.
-      </p>
+      
+        <p>Punya pertanyaan, masukan, atau ingin bergabung dengan salah satu
+        divisi kami? Silakan isi form di bawah ini.</p>
+      
+          <form id="formKontak" aria-label="Form Kontak dan Saran">
 
-       <form id="formKontak" aria-label="Form Kontak dan Saran">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
 
-        <label for="nama">Nama Lengkap</label><br>
-        <input type="text"
-               id="nama"
-               name="nama"
-               autocomplete="name"
-               required><br><br>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            autocomplete="name"
+            required>
+          
+        </div>
 
-        <label for="email">Alamat Email</label><br>
-        <input type="email"
-               id="email"
-               name="email"
-               autocomplete="email"
-               required><br><br>
 
-        <label for="pesan">Pesan atau Saran</label><br>
-        <textarea id="pesan"
-                  name="pesan"
-                  rows="5"
-                  required></textarea><br><br>
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
 
-        <button type="submit">Kirim Pesan</button>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required>
+          
+        </div>
+
+
+        <div class="form-group">
+          <label for="pesan">Pesan atau Saran</label>
+
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="5"
+            required > </textarea>
+         
+        </div>
+
+
+        <button type="submit">
+          Kirim Pesan
+        </button>
 
       </form>
+
     </section>
 
   </main>
 
-  <footer>
-    <p>&copy; 2026 UKM Artcrew - Universitas Katolik Widya Karya</p>
+   <footer>
+    
+     <p>&copy; 2026 UKM Artcrew - Universitas Katolik Widya Karya</p> 
+    
   </footer>
 
+
+  
   <script>
 
-    function tambahGambar() {
+    // Fungsi untuk menambahkan gambar baru  ke dalam elemen dengan id "galeri".
+     
+      function tambahGambar() {
+
+      // Membuat elemen gambar baru
       const img = document.createElement("img");
 
+      // Menentukan sumber gambar
       img.src = "UKM ARTCrew.jpeg";
+
+      // Menentukan lebar gambar
       img.width = 300;
+
+      // Memberikan teks alternatif
       img.alt = "Foto anggota UKM Artcrew";
 
+      // Memasukkan gambar ke dalam galeri
       document.getElementById("galeri").appendChild(img);
     }
 
+
+    // Mencegah form melakukan reload halaman  ketika tombol Kirim Pesan ditekan.
+     
     document.getElementById("formKontak").onsubmit = function(event) {
+
       event.preventDefault();
+
       alert("Pesan berhasil dikirim!");
+
     };
 
   </script>
 
 </body>
 </html>
+
